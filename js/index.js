@@ -1,6 +1,6 @@
 const siteContent = {
   "nav": {
-    "nav-item-1": "Servicessdververa",
+    "nav-item-1": "Services",
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
     "nav-item-4": "Features",
@@ -40,3 +40,47 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+// declaration variable (assignment operator) Dom Selector dot getElement method 
+//(pass in what element we are looking for from the HTML file);
+//variable dot set the attribute of... array name.... what is in the brackets
+
+
+//Nav Bar
+let nav = document.querySelectorAll("a");
+nav.forEach(function (value, i) {
+  value.textContent =siteContent.nav[`nav-item-${i +1}`];
+})
+//^^^^^^ Would like to walk through this one more... I don't fully understand how or why it works, honestly
+
+
+//Round Image
+let roundImg = document.getElementById ("cta-img");
+roundImg.setAttribute ("src", siteContent["cta"]["img-src"])
+
+
+//Dom Is Awesome TagLine
+let sloganThing = document.querySelector("h1");
+sloganThing.textContent = siteContent.cta.h1
+
+
+//Get started Button
+let button = document.querySelector ("button");
+button.textContent = siteContent.cta.button
+
+
+//Features and para
+
+
+//About and para
+
+
+//splash image
+let middleImg = document.getElementById ("middle-img");
+middleImg.setAttribute ("src", siteContent["main-content"]["middle-img-src"])
+
+
+//servs, prods, and vision and paras
+
+
+
+//contact/footer field
