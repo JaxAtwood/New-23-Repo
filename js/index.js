@@ -52,6 +52,30 @@ nav.forEach(function (value, i) {
 })
 //^^^^^^ Would like to walk through this one more... I don't fully understand how or why it works, honestly
 
+const newNavStyle = document.querySelectorAll("a");
+newNavStyle.forEach (element => {
+  element.style.color = 'green';
+  element.style.backgroundColor = "hotpink";
+  element.style.border = "medium solid #C71585";
+})
+
+a = document.querySelector("nav");
+let pH = document.createElement("a");
+pH.textContent = 'I am Bored';
+pH.style.color = 'green';
+pH.style.backgroundColor = "hotpink"
+pH.style.border = "medium solid #C71585";
+a.appendChild(pH);
+pH.setAttribute('href', "#");
+
+a = document.querySelector("nav");
+let pH2 = document.createElement("a");
+pH2.textContent = 'Home';
+pH2.style.color = 'green';
+pH2.style.backgroundColor = "hotpink";
+pH2.style.border = "medium solid #C71585";
+a.prepend(pH2);
+pH2.setAttribute('href', "#");
 
 //Round Image
 let roundImg = document.getElementById ("cta-img");
@@ -66,13 +90,41 @@ sloganThing.textContent = siteContent.cta.h1
 //Get started Button
 let button = document.querySelector ("button");
 button.textContent = siteContent.cta.button
+button.style.color = "pink";
+button.style.backgroundColor = "hotpink";
 
 
 //Features and para
+let bottom1 = document.querySelectorAll(".bottom-content .text-content h4") [0];
+bottom1.textContent = siteContent ["main-content"] ["services-h4"]
 
+let bottom2 = document.querySelectorAll(".bottom-content .text-content p") [0];
+bottom2.textContent = siteContent ["main-content"] ["services-content"]
+
+let bottom3 = document.querySelectorAll(".bottom-content .text-content h4") [1];
+bottom3.textContent = siteContent ["main-content"] ["product-h4"]
+
+let bottom4 = document.querySelectorAll(".bottom-content .text-content p") [1];
+bottom4.textContent = siteContent ["main-content"] ["product-content"]
+
+let bottom5 = document.querySelectorAll(".bottom-content .text-content h4") [2];
+bottom5.textContent = siteContent ["main-content"] ["vision-h4"]
+
+let bottom6 = document.querySelectorAll(".bottom-content .text-content p") [2];
+bottom6.textContent = siteContent ["main-content"] ["vision-content"]
 
 //About and para
+let topperA = document.querySelectorAll(".top-content .text-content h4") [0];
+topperA.textContent = siteContent ["main-content"] ["features-h4"]
 
+let topF = document.querySelectorAll(".top-content .text-content p") [0];
+topF.textContent = siteContent ["main-content"] ["features-content"]
+
+let topperB = document.querySelectorAll(".top-content .text-content h4") [1];
+topperB.textContent = siteContent ["main-content"] ["about-h4"]
+
+let topA = document.querySelectorAll(".top-content .text-content p") [1];
+topA.textContent = siteContent ["main-content"] ["about-content"]
 
 //splash image
 let middleImg = document.getElementById ("middle-img");
@@ -81,6 +133,18 @@ middleImg.setAttribute ("src", siteContent["main-content"]["middle-img-src"])
 
 //servs, prods, and vision and paras
 
+let contactInfo = document.querySelectorAll(".contact h4") [0];
+contactInfo.textContent = siteContent ["contact"] ["contact-h4"]
 
+let snailMail = document.querySelectorAll(".contact p") [0];
+snailMail.textContent = siteContent ["contact"] ["address"]
+
+let callMe = document.querySelectorAll(".contact p") [1];
+callMe.textContent = siteContent ["contact"] ["phone"]
+
+let emailMe = document.querySelectorAll(".contact p") [2];
+emailMe.textContent = siteContent ["contact"] ["email"]
 
 //contact/footer field
+let foot = document.querySelector("footer");
+foot.textContent = siteContent.footer.copyright
